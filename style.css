@@ -1,0 +1,38 @@
+:root{
+  --ink:#16212e; --muted:#5b6776; --paper:#fafbfc; --blue:#003e74; --line:#d5dce5; --soft:#e8eef5;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--ink:#e6ebf1;--muted:#98a4b3;--paper:#10161d;--blue:#7fb0e0;--line:#2b3644;--soft:#1a2430}
+}
+*{box-sizing:border-box}
+html{font-size:18px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem 2rem;padding-top:1.1rem;padding-bottom:1rem}
+.brand{font-family:var(--sans);font-weight:600;color:var(--ink);text-decoration:none;font-size:1.05rem}
+nav{display:flex;gap:1.5rem;font-family:var(--sans);font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none;padding-bottom:.15rem;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="page"]{color:var(--blue);border-bottom-color:var(--blue)}
+a{color:var(--blue)}
+a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+main{padding:2.5rem 0 4rem}
+h1{font-size:2.5rem;line-height:1.15;margin:0 0 .6rem;font-weight:600;letter-spacing:-.01em}
+h2{font-family:var(--sans);font-size:1.15rem;font-weight:600;margin:2.8rem 0 .8rem;padding-bottom:.4rem;border-bottom:1px solid var(--line)}
+h3{font-size:1rem;margin:1.2rem 0 .1rem;font-weight:600}
+p{margin:.6rem 0}
+.lede{font-size:1.2rem;color:var(--muted);margin:0 0 1.5rem}
+.meta{color:var(--muted);font-size:.92rem;margin:0}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding:.55rem 0}
+ul.plain li+li{border-top:1px solid var(--soft)}
+.contact{font-family:var(--sans);font-size:.95rem;display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;margin:1.2rem 0 0}
+.hero-art{margin:2rem 0 .5rem}
+.hero-art svg{width:100%;height:auto;display:block}
+.hero-art .dens{fill:var(--soft);stroke:var(--blue);stroke-width:1.5}
+.hero-art .plan{stroke:var(--blue);stroke-width:1;opacity:.45}
+footer{border-top:1px solid var(--line);color:var(--muted);font-family:var(--sans);font-size:.85rem;padding:1.2rem 0 2rem}
+@media (max-width:30rem){html{font-size:17px}h1{font-size:2rem}}
