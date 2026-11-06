@@ -1,56 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Research – Pengcheng Ye</title>
-<meta name="description" content="Pengcheng Ye – PhD student at Imperial College London working on optimal transport, probability and statistics.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']]}};</script>
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
-</head>
-<body>
+<script>window.MathJax={tex:{inlineMath:[["$","$"]]}};</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<style>
+:root{--bg:#f4f0e7;--ink:#1d2530;--soft:#3b4553;--muted:#5f6773;--line:#d9d2c0;--btn:#b9b19c;--blue:#003e74;--on-blue:#f4f0e7;--frame:#e6e0d1;
+--serif:"Source Serif 4",Georgia,serif;--sans:"Source Sans 3",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12171d;--ink:#e8ecf1;--soft:#c3ccd7;--muted:#98a4b3;--line:#2a3441;--btn:#46546a;--blue:#8fbbe8;--on-blue:#10151b;--frame:#1c2530}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.6}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+header{border-bottom:1px solid var(--line);font-family:var(--sans)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem 1.5rem;padding-top:1rem;padding-bottom:1rem}
+.brand{font-weight:600;font-size:15px;color:var(--ink);text-decoration:none}.brand span{font-weight:400;color:var(--muted);margin-left:.4rem}
+nav{display:flex;gap:1.4rem;font-size:14px;flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;padding-bottom:2px;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink)}nav a[aria-current="page"]{color:var(--blue);border-bottom-color:var(--blue)}
+.hero{display:flex;align-items:center;gap:3rem;padding:3.5rem 0 4rem;flex-wrap:wrap}
+.text{flex:1 1 22rem;min-width:0}
+h1{font-size:2.1rem;line-height:1.15;font-weight:600;letter-spacing:-.01em;margin:0 0 1rem}
+.blurb p{margin:0 0 .8rem;font-size:1.02rem;color:var(--soft)}
+.blurb{margin-bottom:1.5rem}
+.btns{display:flex;flex-wrap:wrap;gap:.6rem;font:600 14px var(--sans)}
+.btns a{padding:.55rem 1.1rem;border-radius:6px;border:1px solid var(--btn);color:var(--ink);text-decoration:none}
+.btns a.primary{background:var(--blue);border-color:var(--blue);color:var(--on-blue)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.photo{flex:0 0 17rem;margin:0 auto;position:relative;width:17rem}
+.frame{width:100%;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--frame);position:relative;border:1px solid var(--line)}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+.frame img+img{opacity:0}.photo.flip .frame img:first-child{opacity:0}.photo.flip .frame img+img{opacity:1}
+.badge{position:absolute;right:-.6rem;bottom:-1.1rem;width:3.6rem;height:4.9rem;border-radius:9px;background:var(--bg);border:1.5px solid var(--ink);color:var(--ink);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:.15rem;padding:0 0 .45rem;font:600 15px var(--sans);letter-spacing:.06em;transition:transform .15s}
+.badge:hover{transform:translateY(-2px) rotate(-3deg)}
+.badge::before{content:"";position:absolute;top:.45rem;left:50%;width:1.1rem;height:.3rem;margin-left:-.55rem;border-radius:99px;border:1.5px solid var(--ink)}
+.badge svg{width:1.5rem;height:1.5rem;transition:transform .3s}.photo.flip .badge svg{transform:scaleX(-1)}
+.photo.flip .badge span{font-size:11px;line-height:1.15;text-align:center;letter-spacing:.02em}
+.links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;font:14px var(--sans)}
+.links a{display:inline-flex;align-items:center;gap:.45rem;padding:.4rem .8rem;border-radius:99px;color:var(--soft);text-decoration:none;border:1px solid var(--line)}
+.links a:hover{border-color:var(--blue);color:var(--blue)}
+.links svg{width:1.05rem;height:1.05rem}
+footer{border-top:1px solid var(--line);color:var(--muted);font:13px var(--sans);padding:1.2rem 0 2rem}
+@media (max-width:40rem){h1{font-size:1.8rem}.photo{order:-1}}
+
+.page{padding:3rem 0 4rem}
+h1.page-title{margin:0 0 .8rem}
+.lede{color:var(--soft);max-width:40rem;margin:0 0 .5rem;font-size:1.05rem}
+h2{font:600 1.1rem var(--sans);margin:2.8rem 0 .3rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{padding:1rem 0}.rows li+li{border-top:1px solid var(--line)}
+.rows h3{margin:0;font-size:1.08rem;font-weight:600}
+.rows .meta{margin:.25rem 0 0;font:14px var(--sans);color:var(--muted)}
+.tag{font:600 11px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin:0 0 .3rem}
+.actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem;font:14px var(--sans)}
+.actions a{padding:.3rem .8rem;border:1px solid var(--btn);border-radius:6px;color:var(--ink);text-decoration:none}
+.actions a:hover{border-color:var(--blue);color:var(--blue)}
+.rows.events li{display:grid;grid-template-columns:14rem 1fr;gap:1.5rem;padding:1.4rem 0}
+.events .when .tag{margin:0 0 .3rem}
+.events .date{font:14px var(--sans);color:var(--soft);margin:0}
+.rows.events h3{font-size:1.08rem;line-height:1.35;font-weight:400}
+.events h3 a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--btn);text-decoration-thickness:2px;text-underline-offset:.22em}
+.events h3 a:hover{color:var(--blue);text-decoration-color:var(--blue)}
+.events .meta{margin:.2rem 0 0}
+.events h3+.meta{margin-top:.5rem}
+@media (max-width:40rem){.rows.events li{grid-template-columns:1fr;gap:.4rem}}
+</style></head><body>
 <header><div class="wrap">
-<a class="brand" href="index.html">Pengcheng (David) Ye</a>
-<nav aria-label="Main">
-<a href="index.html">Home</a>
-<a href="research.html" aria-current="page">Research</a>
-<a href="teaching.html">Teaching &amp; Outreach</a>
-</nav>
+<a class="brand" href="index.html">Pengcheng Ye<span>Mathematics</span></a>
+<nav aria-label="Main"><a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="teaching.html">Teaching &amp; Outreach</a><a href="cv.html">CV</a></nav>
 </div></header>
-<main><div class="wrap">
-<h1>Research</h1>
-<p class="lede">Optimal transport, probability and statistics.</p>
-
+<main><div class="wrap page">
+<h1 class="page-title">Research</h1>
 <h2>Publications &amp; Preprints</h2>
-<ul class="plain">
-<li><h3>L&sup2; over Wasserstein</h3>
-<p class="meta"><!-- TODO: authors, venue/arXiv number, year -->
-<a href="#">arXiv</a></p></li>
-</ul>
-
-<h2>Projects</h2>
-<ul class="plain">
-<li><h3>Undergraduate Researcher</h3></li>
-<li><h3>Imperial College &ndash; NTU Singapore Statistics Research Project</h3></li>
-</ul>
-
-<h2>Awards and Funding</h2>
-<ul class="plain">
-<li><h3>Roth</h3></li>
-<li><h3>UROP</h3></li>
-<li><h3>LMS</h3></li>
+<ul class="rows events">
+<li>
+<div class="when"><p class="tag">Preprint</p><p class="date">2026</p></div>
+<div><h3><a href="https://arxiv.org/abs/2605.21365" target="_blank" rel="noopener">$L^2$ over Wasserstein: Statistical Analysis for Optimal Transport&nbsp;&nearr;</a></h3><p class="meta">Riccardo Passeggeri &middot; Rohan M. Shenoy &middot; Pengcheng Ye</p><p class="meta">arXiv:2605.21365 &middot; Statistics Theory (math.ST)</p></div>
+</li>
 </ul>
 
 <h2>Conferences, Workshops and Schools</h2>
-<ul class="plain">
-<li><h3>GradientsFlows</h3></li>
-<li><h3>LiBERA Winter School on Stochastic Interacting Systems</h3></li>
+<ul class="rows events">
+<li>
+<div class="when"><p class="tag">Upcoming &middot; Workshop</p><p class="date">23&ndash;25 November 2026</p></div>
+<div><h3><a href="https://gradientflows.com/" target="_blank" rel="noopener">3rd Workshop on Gradient Flows for Sampling, Inference, and Learning&nbsp;&nearr;</a></h3><p class="meta">170 Queen&rsquo;s Gate, Imperial College London</p><p class="meta">Poster presentation</p></div>
+</li>
+<li>
+<div class="when"><p class="tag">Upcoming &middot; Winter school</p><p class="date">4&ndash;9 January 2027</p></div>
+<div><h3><a href="https://math.aalto.fi/en/research/stochastics/events/SIS2027/" target="_blank" rel="noopener">LiBERA Winter School on Stochastic Interacting Systems&nbsp;&nearr;</a></h3><p class="meta">Kilpisj&auml;rvi Biological Station, Finland</p></div>
+</li>
 </ul>
 </div></main>
 <footer><div class="wrap">&copy; Pengcheng Ye</div></footer>
-</body>
-</html>
+</body></html>
