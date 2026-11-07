@@ -35,7 +35,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .badge:hover{transform:translateY(-2px) rotate(-3deg)}
 .badge::before{content:"";position:absolute;top:.45rem;left:50%;width:1.1rem;height:.3rem;margin-left:-.55rem;border-radius:99px;border:1.5px solid var(--ink)}
 .badge svg{width:1.5rem;height:1.5rem;transition:transform .3s}.photo.flip .badge svg{transform:scaleX(-1)}
-.photo.flip .badge span{font-size:11px;line-height:1.15;text-align:center;letter-spacing:.02em}
+.photo.flip .badge{padding-bottom:.25rem;gap:.1rem}
+.photo.flip .badge span{margin-bottom:-.25rem;line-height:1;text-align:center;white-space:nowrap}
 .links{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;font:14px var(--sans)}
 .links a{display:inline-flex;align-items:center;gap:.45rem;padding:.4rem .8rem;border-radius:99px;color:var(--soft);text-decoration:none;border:1px solid var(--line)}
 .links a:hover{border-color:var(--blue);color:var(--blue)}
@@ -75,6 +76,6 @@ footer{border-top:1px solid var(--line);color:var(--muted);font:13px var(--sans)
 <footer><div class="wrap">&copy; Pengcheng Ye</div></footer>
 <script>
 var p=document.getElementById("photo");
-document.getElementById("flip").addEventListener("click",function(){p.classList.toggle("flip");document.getElementById("lbl").textContent=p.classList.contains("flip")?"In the wild":"ID"});
+document.getElementById("flip").addEventListener("click",function(){p.classList.toggle("flip");document.getElementById("lbl").innerHTML=p.classList.contains("flip")?"In the<br>wild":"ID"});
 </script>
 </body></html>
