@@ -64,6 +64,9 @@ h2{font:600 1.1rem var(--sans);margin:2.8rem 0 .3rem;padding-bottom:.5rem;border
 .toc a:hover{color:var(--blue)}
 .toc a[aria-current="true"]{color:var(--blue);border-left-color:var(--blue)}
 .cv-title{margin:0 0 1.4rem}
+.cv-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:0 0 1.4rem}.cv-head .cv-title{margin:0}
+.pdfbtn{display:inline-flex;align-items:center;gap:.45rem;font:600 14px var(--sans);padding:.55rem 1.1rem;border-radius:6px;background:var(--blue);border:1px solid var(--blue);color:var(--on-blue);text-decoration:none}
+.pdfbtn:hover{opacity:.9}.pdfbtn svg{width:1.05rem;height:1.05rem}
 .card{background:var(--card);border-radius:6px;box-shadow:var(--shadow);padding:1.6rem 1.8rem 1.2rem;margin:0 0 1.5rem;scroll-margin-top:1rem}
 .card h2{font:400 1.6rem/1.2 var(--serif);margin:0 0 .8rem;padding:0;border:0}
 .gen{border-collapse:collapse;font:16px var(--sans)}
@@ -80,19 +83,20 @@ ul.entries{list-style:none;margin:0;padding:0}
 .sub{margin:.3rem 0 0;font:15px var(--sans);color:var(--muted)}
 .pts{list-style:circle;margin:.7rem 0 0;padding-left:1.25rem;font-size:.97rem;color:var(--soft)}
 .pts li{padding:.15rem 0}
+.oi{margin:0 0 .6rem;font-size:.97rem;color:var(--soft)}
 .pts li.todo{color:var(--muted);font-style:italic}
 @media (max-width:56rem){.cvgrid{grid-template-columns:1fr;gap:1rem}.toc{position:static;flex-direction:row;flex-wrap:wrap;gap:.2rem .4rem}.toc a{border:1px solid var(--line);border-radius:99px;padding:.25rem .7rem}.toc a[aria-current="true"]{border-color:var(--blue)}}
 @media (max-width:40rem){.entries>li{grid-template-columns:1fr;gap:.6rem}.card{padding:1.3rem 1.1rem .8rem}}
 </style></head><body>
 <header><div class="wrap">
-<a class="brand" href="index.html">Pengcheng Ye<span>Mathematics</span></a>
+<a class="brand" href="index.html">Pengcheng Ye</a>
 <nav aria-label="Main"><a href="index.html">Home</a><a href="research.html">Research</a><a href="teaching.html">Teaching &amp; Outreach</a><a href="cv.html" aria-current="page">CV</a></nav>
 </div></header>
 <main><div class="wrap page">
 <div class="cvgrid">
-<nav class="toc" aria-label="CV sections"><a href="#general">General Information</a><a href="#education">Education</a><a href="#work">Work Experience</a><a href="#research">Research Experience</a><a href="#awards">Awards and Grants</a><a href="#teaching">Teaching Experience</a></nav>
+<nav class="toc" aria-label="CV sections"><a href="#general">General Information</a><a href="#education">Education</a><a href="#work">Work Experience</a><a href="#research">Research Experience</a><a href="#awards">Awards</a><a href="#interests">Other Interests</a></nav>
 <div>
-<h1 class="page-title cv-title">CV</h1>
+<div class="cv-head"><h1 class="page-title cv-title">CV</h1><a class="pdfbtn" href="PengchengYe_CV.pdf" download="PengchengYe_CV.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></svg>PDF</a></div>
 <section class="card" id="general">
 <h2>General Information</h2>
 <table class="gen">
@@ -106,7 +110,7 @@ ul.entries{list-style:none;margin:0;padding:0}
 <h2>Education</h2>
 <ul class="entries">
 <li><div><span class="dbadge">2026 &ndash; Now</span></div><div><h3>PhD in Mathematics</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li><strong>Supervision:</strong> Dr. Yanbo Tang and Dr. Riccardo Passeggeri</li><li><strong>Research Directions:</strong> Optimal Transport, Interacting Particle Systems, Mean Field Theory</li><li><strong>Funding:</strong> Fully funded by the Roth Scholarship</li></ul></div></li>
-<li><div><span class="dbadge">2023 &ndash; 2026</span></div><div><h3>BSc in Mathematics</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li><strong>Final year modules:</strong> Probability Theory 1, Functional Analysis, Probability Theory 2, Statistical Mechanics, Stochastic Differential Equations and Diffusion Processes, Fourier Analysis and Theory of Distributions, Probabilistic Generative Models, Methods for Data Science</li><li><strong>Second Year Project:</strong> Viterbi Algorithm and its Applications</li><li><strong>First Year Project:</strong> Seismographic Modelling via Hawkes Processes</li><li>Graduated with First Class Honours</li></ul></div></li>
+<li><div><span class="dbadge">2023 &ndash; 2026</span></div><div><h3>BSc in Mathematics</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li><strong>Final year modules:</strong> Probability Theory 1, Functional Analysis, Probability Theory 2, Statistical Mechanics, Stochastic Differential Equations and Diffusion Processes, Fourier Analysis and Theory of Distributions, Probabilistic Generative Models, Methods for Data Science</li><li><strong>Second Year Project:</strong> Viterbi Algorithm and its Applications</li><li><strong>First Year Project:</strong> Seismographic Modelling via Hawkes Processes</li><li><strong>Final Award:</strong> First Class Honours</li></ul></div></li>
 <li><div><span class="dbadge">2021 &ndash; 2023</span></div><div><h3>IB Diploma</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>American International School of Budapest</span></p><ul class="pts"><li><strong>HL Courses:</strong> Computer Science (7), Mathematics AA (7), Physics (7)</li><li><strong>SL Courses:</strong> Economics (7), French (7), English Language and Literature (6)</li><li><strong>Extended Essay in Mathematics:</strong> An investigation into the Constructability of Regular Polygons</li></ul></div></li>
 </ul>
 </section>
@@ -114,38 +118,32 @@ ul.entries{list-style:none;margin:0;padding:0}
 <section class="card" id="work">
 <h2>Work Experience</h2>
 <ul class="entries">
-<li><div><span class="dbadge">2026</span></div><div><h3>Acquiring Risk and AI Intern</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Revolut</span></p><ul class="pts"><li class="todo">Add a bullet point here.</li><li class="todo">Add a bullet point here.</li></ul></div></li>
-<li><div><span class="dbadge">2025</span></div><div><h3>Trading Intern</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>IMC Trading</span></p><ul class="pts"><li>Built low base-price quoting strategy on India Equity Options Desk</li><li class="todo">Add a bullet point here.</li></ul></div></li>
+<li><div><span class="dbadge">2026</span></div><div><h3>Acquiring Risk and AI Intern</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Revolut</span></p><ul class="pts"><li>Developed smart retry logic for subscription payments to decrease involuntary churn.</li><li>Engineered SEO-based data features for acquiring merchant fraud detection models.</li><li>Scoped a predictive buyer fraud model, extracting key features from acquiring and issuing dispute (TC40 and chargeback) data.</li></ul></div></li>
+<li><div><span class="dbadge">2025</span></div><div><h3>Trading Intern</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>IMC Trading</span></p><ul class="pts"><li>Studied basic options theory and practised trading intuition through weekly training and market simulations.</li><li>Analysed market microstructure and order flow dynamics on India equity options desk.</li><li>Developed quoting strategy targeting low base-price options based on empirical findings.</li></ul></div></li>
 </ul>
 </section>
 
 <section class="card" id="research">
 <h2>Research Experience</h2>
 <ul class="entries">
-<li><div><span class="dbadge">2026</span></div><div><h3>UROP</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li class="todo">Add a bullet point here.</li><li class="todo">Add a bullet point here.</li></ul></div></li>
-<li><div><span class="dbadge">2025</span></div><div><h3>Imperial College &ndash; NTU Singapore Statistics Research Project</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li class="todo">Add a bullet point here.</li><li class="todo">Add a bullet point here.</li></ul></div></li>
+<li><div><span class="dbadge">2026</span></div><div><h3>Undergraduate Research Opportunities Programme</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li>Formulated optimal transport theory between random measures, motivated by empirical measure and Bayesian analysis settings. Derived statistical convergence results under this formulation, with concrete applications in generative modelling.</li><li><strong>Supervision:</strong> Dr. Riccardo Passeggeri</li><li><strong>Funding:</strong> Imperial College Undergraduate Research Opportunities Programme Award (&pound;5,088) and London Mathematical Society Undergraduate Research Bursary (&pound;2,680)</li></ul></div></li>
+<li><div><span class="dbadge">2025</span></div><div><h3>Imperial College &ndash; NTU Singapore Statistics Research Project</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li>Investigated the use of ordinal regression for fragility curve modelling, over traditional nominal methods. Presented statistical improvements for natural hazard loss assessments in collaboration with peers from Imperial and NTU.</li><li><strong>Supervision:</strong> Dr. Ioanna Papatsouma, Dr. Chris Hallsworth and Dr. Michele Nguyen</li><li><strong>Funding:</strong> Imperial College International Relations Office (&pound;1,320)</li></ul></div></li>
 </ul>
 </section>
 
 <section class="card" id="awards">
-<h2>Awards and Grants</h2>
+<h2>Awards</h2>
 <ul class="entries">
-<li><div><span class="dbadge">2026</span></div><div><h3>Imperial College UROP Award</h3><p class="sub">&pound;5,088</p></div></li>
-<li><div><span class="dbadge">2026</span></div><div><h3>London Mathematical Society Undergraduate Research Bursaries</h3><p class="sub">&pound;2,680</p></div></li>
-<li><div><span class="dbadge">20XX</span></div><div><h3>Peer Tutor of the Year Award</h3></div></li>
+<li><div><span class="dbadge">2026</span></div><div><h3>Peer Tutor of the Year Award</h3></div></li>
 <li><div><span class="dbadge">2023 &ndash; 2026</span></div><div><h3>Dean&rsquo;s List</h3><p class="sub">Years 1, 2 and 3</p></div></li>
 </ul>
 </section>
 
-<section class="card" id="teaching">
-<h2>Teaching Experience</h2>
-<ul class="entries">
-<li><div><span class="dbadge">Sep 2026 &ndash; Now</span></div><div><h3>Graduate Teaching Assistant</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li>MATH50001 Analysis 2</li><li class="todo">Add a bullet point here.</li></ul></div></li>
-<li><div><span class="dbadge">2025 &ndash; 2026</span></div><div><h3>Undergraduate Peer Tutor</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li class="todo">Add a bullet point here.</li><li class="todo">Add a bullet point here.</li></ul></div></li>
-<li><div><span class="dbadge">2024 &ndash; 2025</span></div><div><h3>A-level Further Math Tutor</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Imperial College London</span></p><ul class="pts"><li class="todo">Add a bullet point here.</li><li class="todo">Add a bullet point here.</li></ul></div></li>
-<li><div><span class="dbadge">Jan 2024 &ndash; Jan 2025</span></div><div><h3>Maths Circle Mentor</h3><p class="inst"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 11v7M9.5 11v7M14.5 11v7M19 11v7M3 20h18"/></svg><span>Axiom Maths</span></p><ul class="pts"><li class="todo">Add a bullet point here.</li><li class="todo">Add a bullet point here.</li></ul></div></li>
-</ul>
+<section class="card" id="interests">
+<h2>Other Interests</h2>
+<p class="oi">Chess, Catan, Running, Racket Sports</p>
 </section>
+
 
 </div>
 </div>
